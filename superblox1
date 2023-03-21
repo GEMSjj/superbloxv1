@@ -1,0 +1,183 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local ImageLabel = Instance.new("ImageLabel")
+local off = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local TextLabel_2 = Instance.new("TextLabel")
+local on = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local TextButton = Instance.new("TextButton")
+local testtitle = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+Frame.Position = UDim2.new(0.413704216, 0, 0.236331582, 0)
+Frame.Size = UDim2.new(0, 432, 0, 285)
+
+UICorner.Parent = Frame
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.620582819, 0, 0.809183121, 0)
+TextLabel.Size = UDim2.new(0, 129, 0, 37)
+TextLabel.Font = Enum.Font.PermanentMarker
+TextLabel.Text = "Notgems#3638 (v1)"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+ImageLabel.Parent = Frame
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.Position = UDim2.new(0.661872089, 0, 0.354534507, 0)
+ImageLabel.Size = UDim2.new(0, 100, 0, 100)
+ImageLabel.Image = "rbxassetid://3057073083"
+
+off.Name = "off"
+off.Parent = Frame
+off.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+off.BackgroundTransparency = 0.500
+off.Position = UDim2.new(0.0925013646, 0, 0.708878994, 0)
+off.Size = UDim2.new(0, 142, 0, 50)
+off.Font = Enum.Font.PermanentMarker
+off.Text = "GK OP MODE OFF"
+off.TextColor3 = Color3.fromRGB(255, 255, 255)
+off.TextScaled = true
+off.TextSize = 14.000
+off.TextWrapped = true
+
+UICorner_2.Parent = off
+
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.0534533039, 0, 0.0372532904, 0)
+TextLabel_2.Size = UDim2.new(0, 374, 0, 37)
+TextLabel_2.Font = Enum.Font.PermanentMarker
+TextLabel_2.Text = "Scripting Community (by gems)"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+on.Name = "on"
+on.Parent = Frame
+on.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+on.BackgroundTransparency = 0.500
+on.Position = UDim2.new(0.0925013646, 0, 0.32219857, 0)
+on.Size = UDim2.new(0, 142, 0, 50)
+on.Font = Enum.Font.PermanentMarker
+on.Text = "GK OP MODE ON"
+on.TextColor3 = Color3.fromRGB(255, 255, 255)
+on.TextScaled = true
+on.TextSize = 14.000
+on.TextWrapped = true
+
+UICorner_3.Parent = on
+
+TextButton.Parent = ScreenGui
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BackgroundTransparency = 1.000
+TextButton.Position = UDim2.new(0.771876276, 0, 0.0352733694, 0)
+TextButton.Size = UDim2.new(0, 170, 0, 54)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Close"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+
+testtitle.Name = "testtitle"
+testtitle.Parent = ScreenGui
+testtitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+testtitle.BackgroundTransparency = 1.000
+testtitle.Size = UDim2.new(0, 200, 0, 50)
+testtitle.Font = Enum.Font.SourceSans
+testtitle.Text = ""
+testtitle.TextColor3 = Color3.fromRGB(0, 0, 0)
+testtitle.TextSize = 14.000
+
+-- Scripts:
+
+local function SJZTRYS_fake_script() -- ScreenGui.LocalScript 
+	local script = Instance.new('LocalScript', ScreenGui)
+
+	local onbutton = script.Parent.Frame.on
+	local offbutton = script.Parent.Frame.off
+	
+	onbutton.MouseButton1Click:Connect(function()
+		script.Parent.testtitle.Text = "SUS"
+	end)
+	offbutton.MouseButton1Click:Connect(function()
+		script.Parent.testtitle.Text = "SUSSY"
+	end)
+end
+coroutine.wrap(SJZTRYS_fake_script)()
+local function SHSF_fake_script() -- ScreenGui.LocalScript 
+	local script = Instance.new('LocalScript', ScreenGui)
+
+	-- HOW TO DO --
+	-- 1. Insert a ScreenGui then drag it into the StarterGui
+	-- 2. Insert a Frame
+	-- 3. Insert TextButton
+	-- 4. Insert a Local Script inside the TextButton
+	
+	-- LocalScript:
+	
+	local Open = false
+	local Frame = script.Parent.Frame
+	local Button = script.Parent.TextButton
+	
+	function Clicked()
+		if Open == false then
+			Open = true
+			Frame.Visible = true
+			Button.Text = "Close" -- Closes the Frame
+		elseif Open == true then
+			Open = false
+			Frame.Visible = false
+			Button.Text = "Open" -- Opens the Frame
+		end
+	end
+	
+	
+	Button.MouseButton1Click:connect(Clicked)
+end
+coroutine.wrap(SHSF_fake_script)()
+local function OUANHB_fake_script() -- ScreenGui.LocalScript 
+	local script = Instance.new('LocalScript', ScreenGui)
+
+	local onbutton = script.Parent.Frame.on
+	local offbutton = script.Parent.Frame.off
+	
+	
+	while true do 
+		if script.Parent.testtitle.Text == "SUS" then
+			game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 21
+			game.Players.LocalPlayer.Character.Humanoid:MoveTo(workspace.Ball.Position)
+			if script.Parent.testtitle.Text == "SUSSY" then
+				break
+	
+			end
+		end
+		if script.Parent.testtitle.Text == "SUSSY" then
+			game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+			
+		end
+		wait(0.1)
+	end
+end
+coroutine.wrap(OUANHB_fake_script)()
